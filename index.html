@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+<body style="background-color:white;">
+
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://i.pinimg.com/originals/8a/2b/77/8a2b776de98dab6cfe37dc7b784de63a.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.pinimg.com/originals/e6/2a/2c/e62a2ce832d1c3824855293873a2d673.jpg" style="width:100%">
+  <img class="mySlides" src="https://wallpaperaccess.com/full/2043131.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.pinimg.com/originals/95/f1/ac/95f1acf7d51f107cc04ad272d99cd54e.png" style="width:100%">
+  <img class="mySlides" src="https://i.pinimg.com/564x/9a/13/ca/9a13cad78023b98688bbc717b777ad36.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.pinimg.com/564x/13/0e/8b/130e8bc8f0b3badbcb90cf099d6926d7.jpg" style="width:100%">
+
+  <button class="w3-button w3-transparant w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-transparant w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
